@@ -7,7 +7,7 @@ public class InputCalculator {
 
     String userNumber = scanner.nextLine();
 
-    if(userNumber == 1) {
+    if(true) {
       System.out.println("This is a test");
     }
 
