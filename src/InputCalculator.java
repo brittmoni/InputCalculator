@@ -5,10 +5,24 @@ public class InputCalculator {
   public static void inputThenPrintSumAndAverage() {
     Scanner scanner = new Scanner(System.in);
 
-    String userNumber = scanner.nextLine();
+    int count = 0;
+    int number = 0;
 
-    if(true) {
-      System.out.println("This is a test");
+    while (true) {
+      boolean isAnInt = scanner.hasNextInt();
+
+      if (!isAnInt) {
+        System.out.println("SUM = " + number + " AVG = " + (Math.round((double) number / (double) count)));
+        break;
+      } else if (isAnInt) {
+        int userNumber = scanner.nextInt();
+        count++;
+        number += userNumber;
+//        System.out.println(count);
+      } else {
+        System.out.println("SUM = " + number + " AVG = " + (Math.round((double) number / (double) count)));
+        break;
+      }
     }
 
     scanner.close();
